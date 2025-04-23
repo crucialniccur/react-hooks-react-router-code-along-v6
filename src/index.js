@@ -1,7 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Home from "./pages/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Login from "./pages/Login";
 
 const router = createBrowserRouter([
   {
@@ -11,4 +13,4 @@ const router = createBrowserRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Home />);
+root.render(<RouterProvider router={router} />);
